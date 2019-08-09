@@ -8,37 +8,26 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
- * @author AVINASH KUMAR
+ * @author AVINASH KUMAR PRAJAPATI
  */
 public class Factorial {
-    
-    public static void main(String[] args)
-    {
-    
-    InputStreamReader isr = new InputStreamReader(System.in);
-    BufferedReader br = new BufferedReader(isr);
-    
+
+    public static void main(String[] args) {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
         try {
             int inputNumber = Integer.parseInt(br.readLine());
-            int result=fact(inputNumber);
-                    System.out.println(result);
+            int result = fact(inputNumber);
+            System.out.println(result);
         } catch (Exception ex) {
-           
+            ex.printStackTrace();
         }
-    
     }
-    private static Integer fact(Integer num)
-    {
-        if(num==0 || num==1)
-        {return 1;}
-        else 
-        {
-          return num*fact(num-1);
+    private static Integer fact(Integer num) {
+        if (num == 0 || num == 1) {
+            return 1;
+        } else {
+            return num * fact(num - 1);
         }
-       
-    
     }
-    
-    
 }
